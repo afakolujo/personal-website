@@ -1,11 +1,11 @@
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import Landing from './components/Landing'
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Landing />
     </>
   )
 }
