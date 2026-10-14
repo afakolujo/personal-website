@@ -1,7 +1,13 @@
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 
 function App() {
-  return <Hero />
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  )
 }
 
 export default App

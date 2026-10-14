@@ -1,0 +1,87 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: 'initials links email';
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  background: transparent;
+}
+
+.navbar a {
+  color: var(--textColor);
+  text-decoration: none;
+  transition: color 150ms ease-out;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+  color: var(--accentColor);
+}
+
+.navbar a:focus-visible {
+  outline: 2px solid var(--accentColor);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.navbar__initials {
+  grid-area: initials;
+  justify-self: start;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.navbar__nav {
+  grid-area: links;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+.navbar__email {
+  grid-area: email;
+  justify-self: end;
+  font-size: 0.9rem;
+}
+
+/* On narrow screens, put the links on their own row below initials + email */
+@media (max-width: 640px) {
+  .navbar {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'initials email'
+      'links links';
+    padding: 1rem;
+    row-gap: 0.5rem;
+  }
+
+  .navbar__links {
+    gap: 1.5rem;
+  }
+
+  .navbar__email {
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar a {
+    transition: none;
+  }
+}

@@ -1,7 +1,8 @@
 :root {
-  --color-bg: #0b0b0f;
-  --color-text: #f5f5f7;
-  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --backgroundColor: #0a0e17;
+  --accentColor: #5eead4;
+  --textColor: #eae5ec;
+  --fontFamily: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 *,
@@ -18,7 +19,14 @@ body,
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-body);
+  background: var(--backgroundColor);
+  color: var(--textColor);
+  font-family: var(--fontFamily);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
