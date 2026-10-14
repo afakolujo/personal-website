@@ -1,4 +1,4 @@
-# alicia-site
+# personal-website
 
 Vite + React 18 + TypeScript.
 
